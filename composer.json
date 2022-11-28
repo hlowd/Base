@@ -1,0 +1,17 @@
+{
+    "name": "hlowd/base",
+    "description": "static tool class",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hlowd\\Base\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zf",
+            "email": "tosee@yeah.com"
+        }
+    ],
+    "require": {}
+}
