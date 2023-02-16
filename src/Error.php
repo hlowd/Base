@@ -22,20 +22,20 @@ class Error{
         return ['Code'=>self::FAIL,'Msg'=>$msg];
     }
 
-    public static function failNoLogin(){
-        return ['Code'=>self::NO_LOGIN,'Msg'=>'您还没有登录!'];
+    public static function failNoLogin($msg="您还没有登录"){
+        return ['Code'=>self::NO_LOGIN,'Msg'=>$msg];
     }
 
-    public static function failNoPriv(){
-        return ['Code'=>self::NO_PRIV,'Msg'=>'您没有相关操作权限！'];
+    public static function failNoPriv($msg = "您没有相关操作权限"){
+        return ['Code'=>self::NO_PRIV,'Msg'=>$msg];
     }
 
-    public static function failNoOrder(){
-        return ['Code'=>self::NO_ORDER,'Msg'=>'您没有相关学习权限，请购买!'];
+    public static function failNoOrder($msg ="您没有相关学习权限，请购买"){
+        return ['Code'=>self::NO_ORDER,'Msg'=>$msg];
     }
 
-    public static function failTokenExpire(){
-        return ['Code'=>self::FAIL_ACCESS_TOKEN_EXPIRE,'Msg'=>'ACCESS_TOKEN 已经过期了！'];
+    public static function failTokenExpire($msg="ACCESS_TOKEN 已经过期了"){
+        return ['Code'=>self::FAIL_ACCESS_TOKEN_EXPIRE,'Msg'=>$msg];
     }
 
 }
