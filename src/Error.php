@@ -8,6 +8,7 @@ class Error{
     const NO_LOGIN = 2; //没有登录
     const NO_PRIV = 3;  //没有操作权限
     const NO_ORDER = 4;  //没有课程权限
+    const FAIL_ACCESS_TOKEN_EXPIRE = 5; //access_token过期，需要更新
 
     public static function succ($data=[],$msg="成功"){
         return ['Code'=>self::SUCCESS,'Data'=>$data,'Msg'=>$msg];
@@ -31,6 +32,10 @@ class Error{
 
     public static function failNoOrder(){
         return ['Code'=>self::NO_ORDER,'Msg'=>'您没有相关学习权限，请购买!'];
+    }
+
+    public static function failTokenExpire(){
+        return ['Code'=>self::FAIL_ACCESS_TOKEN_EXPIRE,'Msg'=>'ACCESS_TOKEN 已经过期了！'];
     }
 
 }
