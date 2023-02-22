@@ -9,6 +9,7 @@ class Error{
     const NO_PRIV = 3;  //没有操作权限
     const NO_ORDER = 4;  //没有课程权限
     const FAIL_ACCESS_TOKEN_EXPIRE = 5; //access_token过期，需要更新
+    const FAIL_ACCESS_TOKEN_OBSOLETE = 6; //access_token废弃，被别人登录导致
 
     public static function succ($data=[],$msg="成功"){
         return ['Code'=>self::SUCCESS,'Data'=>$data,'Msg'=>$msg];
@@ -35,6 +36,10 @@ class Error{
     }
 
     public static function failTokenExpire($msg="ACCESS_TOKEN 已经过期了"){
+        return ['Code'=>self::FAIL_ACCESS_TOKEN_EXPIRE,'Msg'=>$msg];
+    }
+
+    public static function failTokenObsolete($msg="ACCESS_TOKEN 已更新请重新登录"){
         return ['Code'=>self::FAIL_ACCESS_TOKEN_EXPIRE,'Msg'=>$msg];
     }
 
