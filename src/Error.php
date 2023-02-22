@@ -40,7 +40,7 @@ class Error{
     }
 
     public static function failTokenObsolete($msg="ACCESS_TOKEN 已更新请重新登录"){
-        return ['Code'=>self::FAIL_ACCESS_TOKEN_EXPIRE,'Msg'=>$msg];
+        return ['Code'=>self::FAIL_ACCESS_TOKEN_OBSOLETE,'Msg'=>$msg];
     }
 
 }
