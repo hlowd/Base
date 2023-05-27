@@ -13,5 +13,8 @@
             "email": "tosee@yeah.com"
         }
     ],
-    "require": {}
+    "require": {
+        "curl/curl": "^2.4",
+        "ext-json": "*"
+    }
 }
