@@ -28,13 +28,12 @@ class Auth
         if ($this->curl->error) {
             throw new Exception($this->curl->error_message);
         } else {
-            $res = json_decode($this->curl->getResponse());
-            if(isset($res->errcode) and intval($res->errcode) !== 0){
+            $res = json_decode($this->curl->getResponse(),true);
+            if(intval($res['errcode'] ?? 0) !== 0){
                 throw new Exception($res->errmsg);
             }
             return $res;
         }
-
     }
 
     /**
