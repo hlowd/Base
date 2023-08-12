@@ -17,7 +17,7 @@ class Validator extends Facade
      */
 
 
-    public static function getAccessor(): string
+    protected static function getAccessor(): string
     {
         return ValidatorClass::class;
     }

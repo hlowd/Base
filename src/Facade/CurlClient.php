@@ -3,7 +3,6 @@
 namespace Hlowd\Base\Facade;
 
 use Hlowd\Base\Comm\Facade;
-use Hlowd\Base\Comm\WebResult;
 use Hlowd\Base\Service\CurlClientClass;
 
 class CurlClient extends Facade
@@ -14,7 +13,7 @@ class CurlClient extends Facade
      *
      */
 
-    public static function getAccessor(): string
+    protected static function getAccessor(): string
     {
         return CurlClientClass::class;
     }
