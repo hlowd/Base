@@ -33,9 +33,4 @@ class Facade
         }
         return $instance->$method(...$args);
     }
-
-    public function __get($name){
-        return static::$$name??$this->$$name;
-    }
-
 }

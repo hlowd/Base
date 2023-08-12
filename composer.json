@@ -15,6 +15,7 @@
     ],
     "require": {
         "curl/curl": "^2.4",
-        "ext-json": "*"
+        "ext-json": "*",
+        "firebase/php-jwt": "^6.8"
     }
 }
