@@ -4,6 +4,7 @@ namespace Hlowd\Base\Service;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+use Hlowd\Base\Facade\Error;
 use stdClass;
 
 class JwtClass
@@ -46,7 +47,6 @@ class JwtClass
      */
     public function encode(array $payload,string $privKey):string{
         return JWT::encode($payload, $privKey, 'RS256');
-
     }
 
 

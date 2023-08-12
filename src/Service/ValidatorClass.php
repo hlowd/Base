@@ -23,6 +23,11 @@ class ValidatorClass implements IValidator
         return $this->regCheck($str,'/^\d{4}$/');
     }
 
+
+    /**
+     * @param string $str
+     * @return bool
+     */
     public function isEmail(string $str=''):bool{
         return $this->regCheck($str,'/^\w+[-|\w._]+@(\w+(-\w+)?\\.)+[a-z]{2,}$/');
     }

@@ -5,16 +5,17 @@ namespace Hlowd\Base\Facade;
 use Hlowd\Base\Comm\Facade;
 use Hlowd\Base\Service\ValidatorClass;
 
+/**
+ * @method static bool isMobile(string $str)
+ * @method static bool isPassword(string $str)
+ * @method static bool isEmail(string $str)
+ * @method static bool isSms(string $str)
+ * @method static bool isIdNum(string $str)
+ */
+
+
 class Validator extends Facade
 {
-    /**
-     * @method static bool isMobile(string $str)
-     * @method static bool isPassword(string $str)
-     * @method static bool isEmail(string $str)
-     * @method static bool isPassword(string $str)
-     * @method static bool isSms(string $str)
-     * @method static bool isIdNum(string $str)
-     */
 
 
     protected static function getAccessor(): string
