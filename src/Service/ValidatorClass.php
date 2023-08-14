@@ -22,8 +22,6 @@ class ValidatorClass implements IValidator
     public function isSms(string $str=''):bool{
         return $this->regCheck($str,'/^\d{4}$/');
     }
-
-
     /**
      * @param string $str
      * @return bool
