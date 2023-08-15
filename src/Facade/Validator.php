@@ -11,6 +11,12 @@ use Hlowd\Base\Service\ValidatorClass;
  * @method static bool isEmail(string $str)
  * @method static bool isSms(string $str)
  * @method static bool isIdNum(string $str)
+ *
+ * @method static string filterMobile(string $str)
+ * @method static string filterPassword(string $str)
+ * @method static string filterEmail(string $str)
+ * @method static string filterSms(string $str)
+ * @method static string filterIdNum(string $str)
  */
 
 
