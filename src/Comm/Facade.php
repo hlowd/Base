@@ -21,7 +21,7 @@ class Facade
     /**
      * @throws Exception
      */
-    public static function __callStatic($method, $args)
+    protected static function __callStatic($method, $args)
     {
         $accessor = static::getAccessor();
         if(!$accessor){
