@@ -11,7 +11,7 @@ class ValidatorClass implements IValidator
         return $this->regCheck($str,'/^1[3456789]\d{9}$/');
     }
 
-    public function filterMobile(string $str=''):bool{
+    public function filterMobile(string $str=''):string{
         return $this->regFilter($str,'/^1[3456789]\d{9}$/');
     }
 
@@ -19,11 +19,11 @@ class ValidatorClass implements IValidator
         return $this->regCheck($str,'/^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^\da-zA-Z\s]).{8,20}$/');
     }
 
-    public function filterPassword(string $str=''):bool{
+    public function filterPassword(string $str=''):string{
         return $this->regFilter($str,'/^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^\da-zA-Z\s]).{8,20}$/');
     }
 
-    public function filterNormalPassword(string $str=''):bool{
+    public function filterNormalPassword(string $str=''):string{
         return $this->regFilter($str,'/\w.{8,20}$/');
     }
 
@@ -31,7 +31,7 @@ class ValidatorClass implements IValidator
         return $this->regCheck($str,'/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/');
     }
 
-    public function filterIdNum(string $str=''):bool{
+    public function filterIdNum(string $str=''):string{
         return $this->regFilter($str,'/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/');
     }
 
@@ -40,7 +40,7 @@ class ValidatorClass implements IValidator
         return $this->regCheck($str,'/^\d{4}$/');
     }
 
-    public function filterSms(string $str=''):bool{
+    public function filterSms(string $str=''):string{
         return $this->regFilter($str,'/^\d{4}$/');
     }
 
@@ -49,7 +49,7 @@ class ValidatorClass implements IValidator
         return $this->regCheck($str,'/^\w+[-|\w._]+@(\w+(-\w+)?\\.)+[a-z]{2,}$/');
     }
 
-    public function filterEmail(string $str=''):bool{
+    public function filterEmail(string $str=''):string{
         return $this->regFilter($str,'/^\w+[-|\w._]+@(\w+(-\w+)?\\.)+[a-z]{2,}$/');
     }
 
