@@ -4,8 +4,11 @@ namespace Hlowd\Base\Service;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-use Hlowd\Base\Facade\Error;
+use Firebase\JWT\ExpiredException;
+use Hlowd\Base\Exceptions\TokenExpiredException;
+use Hlowd\Base\Exceptions\JWTException;
 use stdClass;
+use Throwable;
 
 class JwtClass
 {
@@ -34,9 +37,18 @@ class JwtClass
      * @param string $token
      * @param string $pubKey
      * @return stdClass
+     * @throws JWTException
+     * @throws TokenExpiredException
      */
     public function decode(string $token,string $pubKey):stdClass{
-        return JWT::decode($token, new Key($pubKey, 'RS256'));
+        try{
+            return JWT::decode($token, new Key($pubKey, 'RS256'));
+        } catch (ExpiredException $e) {
+            throw new TokenExpiredException("token已经过期");
+        }catch(Throwable $e){
+            throw new JWTException($e->getMessage());
+        }
+
 
     }
 
