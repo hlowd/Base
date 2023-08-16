@@ -84,7 +84,7 @@ class ErrorClass implements IError
         return $this->getWebResult(ErrorConf::FAIL_NO_RES, "您没有相关访问,请购买开通");
     }
 
-    private function getWebResult(int $code,string $msg,array|object|null $data = null):WebResult
+    private function getWebResult(int $code,string $msg,array $data = []):WebResult
     {
         return new WebResult($code,$msg,$data);
     }
