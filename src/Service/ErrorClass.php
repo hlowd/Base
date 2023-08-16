@@ -89,4 +89,6 @@ class ErrorClass implements IError
         return new WebResult($code,$msg,$data);
     }
 
+
+
 }
