@@ -20,13 +20,12 @@ class ErrorConf
      */
     const FAIL_ACCESS_TOKEN_EXPIRE = 22;
     const FAIL_ACCESS_TOKEN_DEPRECATED = 23;
-    const FAIL_REFRESH_TOKEN_EXPIRE = 22;
-    const FAIL_REFRESH_TOKEN_DEPRECATED = 23;
+    const FAIL_REFRESH_TOKEN_EXPIRE = 24;
+    const FAIL_REFRESH_TOKEN_DEPRECATED = 25;
 
     /**
      * @doc 31-39 权限相关
      */
-
     const FAIL_NO_LOGIN = 31;
     const FAIL_NO_RES =32;
     const FAIL_NO_PRIV =32;
