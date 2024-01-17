@@ -4,7 +4,7 @@ namespace Hlowd\Base\Service;
 
 class CommClass
 {
-    public function RedisHashMapDecode(array $redisHashMap):array{
+    public function redisHashMapDecode(array $redisHashMap):array{
         $result = [];
         foreach ($redisHashMap as $r){
             $result[] = json_decode($r);
@@ -12,7 +12,7 @@ class CommClass
         return $result;
     }
 
-    public function RedisHashMapEncode(array $rs):array{
+    public function redisHashMapEncode(array $rs):array{
         $result = [];
         foreach ($rs as $r){
             $result[$r->id] = json_encode($r,JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_UNICODE);
