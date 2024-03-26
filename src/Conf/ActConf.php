@@ -14,6 +14,8 @@ class ActConf
 
     const ACT_START =6;
     const ACT_STOP = 7;
-
-
+    const ACT_RESTART = 8;
+    const ACT_SUBMIT = 10;
+    const ACT_PASS = 11;
+    const ACT_REJECT = 12;
 }
