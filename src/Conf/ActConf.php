@@ -11,6 +11,7 @@ class ActConf
     const ACT_SORT = 4; //改变顺序
 
     const ACT_ACTIVE = 5;//激活条目:
+    const ACT_UN_ACT = 9;//反激活条目:
 
     const ACT_START =6;
     const ACT_STOP = 7;
@@ -18,4 +19,5 @@ class ActConf
     const ACT_SUBMIT = 10;
     const ACT_PASS = 11;
     const ACT_REJECT = 12;
+
 }
